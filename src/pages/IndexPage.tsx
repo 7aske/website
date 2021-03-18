@@ -7,17 +7,6 @@ import Typist from "react-typist";
 import { ContactInfoContainer } from "../components/slider/ContactInfoContainer";
 import cookie from "react-cookies";
 
-const content = <div>
-	Hello! My name is <span className="theme-primary-text">Nikola</span>.<br/>
-	I'm a nerd and an aspiring<br/>
-	software engineer specializing in development of <span
-	className="theme-primary-text">web systems</span>.<br/>
-	EOF<br/>
-	<Prompt/> <span className="theme-primary-text">date</span> '+Today is %A, %B %d, %Y.'<br/>
-	<Version/> <br/>
-	<Prompt/> <br/>
-</div>;
-
 export const IndexPage = () => {
 	const visited = !!cookie.load("visited");
 
@@ -29,10 +18,26 @@ export const IndexPage = () => {
 
 	const getContent = () => {
 		if (visited)
-			return content;
+			return <>
+				Hello! My name is <span className="theme-primary-text">Nikola</span>.<br/>
+				I'm a nerd and an aspiring<br/>
+				software engineer specializing in development of <span
+				className="theme-primary-text">web systems</span>.<br/>
+				EOF<br/>
+				<Prompt/> <span className="theme-primary-text">date</span> '+Today is %A, %B %d, %Y.'<br/>
+				<Version/> <br/>
+				<Prompt/> <br/>
+			</>;
 		else
 			return <Typist cursor={{element: "█", blink: true}} avgTypingDelay={30}>
-				{content}
+				Hello! My name is <span className="theme-primary-text">Nikola</span>.<br/>
+				I'm a nerd and an aspiring<br/>
+				software engineer specializing in development of <span
+				className="theme-primary-text">web systems</span>.<br/>
+				EOF<br/>
+				<Prompt/> <span className="theme-primary-text">date</span> '+Today is %A, %B %d, %Y.'<br/>
+				<Version/> <br/>
+				<Prompt/> <br/>
 			</Typist>;
 	};
 
