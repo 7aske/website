@@ -4,6 +4,7 @@ import Typist from "react-typist";
 import { Terminal } from "../components/slider/Terminal";
 import { Slider } from "../components/slider/Slider";
 import ReactTooltip from "react-tooltip";
+import { ContactInfoContainer } from "../components/slider/ContactInfoContainer";
 
 export interface Proj {
 	name: string;
@@ -45,7 +46,7 @@ const projs: Proj[] = [
 
 const Project = ({href, name, description}: Proj) => {
 	return (<>
-		<a key={href} target="_blank" data-tip={description} href={href}>{name}</a><br/>
+		<a target="_blank" data-tip={description} href={href}>{name}</a><br/>
 		<ReactTooltip effect="solid" place="right" type="dark"/>
 	</>);
 }
@@ -57,7 +58,7 @@ export const ProjectsPage = () => {
 				<Terminal>
 					<Prompt/> <span className="theme-primary-text">cat</span> ~/projects<br/>
 					<Typist cursor={{element: "█", blink: true}} avgTypingDelay={30}>
-						{projs.map(proj => <Project {...proj}/>)}
+						{projs.map(proj => <Project key={proj.name} {...proj}/>)}
 						<Prompt/> <br/>
 					</Typist>
 				</Terminal>

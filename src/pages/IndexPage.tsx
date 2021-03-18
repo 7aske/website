@@ -3,6 +3,7 @@ import { Slider } from "../components/slider/Slider";
 import { Terminal, Version } from "../components/slider/Terminal";
 import { Prompt } from "../components/slider/Prompt";
 import Typist from "react-typist";
+import { ContactInfoContainer } from "../components/slider/ContactInfoContainer";
 
 export const IndexPage = () => {
 	return (
@@ -21,6 +22,7 @@ export const IndexPage = () => {
 						<Prompt/> <br/>
 					</Typist>
 				</Terminal>
+				<ContactInfoContainer/>
 			</Slider>
 		</div>
 	);

@@ -7,7 +7,6 @@ export const Slider = (props: SliderProps) => {
 	return (
 		<div style={style}>
 			{props.children}
-			<ContactInfoContainer/>
 		</div>
 	);
 };
