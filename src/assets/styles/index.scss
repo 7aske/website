@@ -62,3 +62,37 @@ html, body {
 		}
 	}
 }
+
+.terminal {
+	padding: 0.5em;
+	height: 16em;
+	width: 30em;
+	max-width: 90vw;
+	z-index: 2;
+	box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+@media screen and (max-width: 600px) {
+	.terminal {
+		height: 20em;
+		font-size: 1em;
+	}
+}
+
+.navbar {
+	position: absolute;
+	bottom: 0;
+	ul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	box-shadow: none;
+	overflow: hidden;
+}
+
+a {
+	&:hover {
+		color: $theme-accent2 !important;
+	}
+}

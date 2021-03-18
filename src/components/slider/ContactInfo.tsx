@@ -13,7 +13,7 @@ export const ContactInfo = (props: ContactInfoProps) => {
 			<a target="_blank" className="hover-text" data-tip={props.description} href={props.url}>
 				<FontAwesomeIcon size={"3x"} icon={props.icon}/>
 			</a>
-			<ReactTooltip effect="solid" place="bottom" type="light"/>
+			<ReactTooltip effect="solid" place="bottom" type="dark"/>
 		</div>
 	);
 };

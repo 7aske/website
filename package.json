@@ -27,7 +27,7 @@
     "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "deploy:prod": "rsync -ahve ssh build/ root@7aske.com:/srv/http/website/",
+    "deploy:prod": "rsync --delete --progress -havz build/ root@7aske.com:/srv/http/website/",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

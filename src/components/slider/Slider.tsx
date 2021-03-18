@@ -1,12 +1,12 @@
 import * as React from "react";
 import { CSSProperties } from "react";
-import { WelcomeBox } from "./WelcomeBox";
 import { ContactInfoContainer } from "./ContactInfoContainer";
 
-export const Slider = () => {
+type SliderProps = {} & React.PropsWithChildren<any>;
+export const Slider = (props: SliderProps) => {
 	return (
 		<div style={style}>
-			<WelcomeBox/>
+			{props.children}
 			<ContactInfoContainer/>
 		</div>
 	);

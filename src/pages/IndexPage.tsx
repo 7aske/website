@@ -1,10 +1,27 @@
 import * as React from "react";
 import { Slider } from "../components/slider/Slider";
+import { Terminal, Version } from "../components/slider/Terminal";
+import { Prompt } from "../components/slider/Prompt";
+import Typist from "react-typist";
 
 export const IndexPage = () => {
 	return (
 		<div>
-			<Slider/>
+			<Slider>
+				<Terminal>
+					<Prompt/> <span className="theme-primary-text">cat</span> &lt;&lt; EOF<br/>
+					<Typist cursor={{element: "█", blink: true}} avgTypingDelay={30}>
+						Hello! My name is <span className="theme-primary-text">Nikola</span>.<br/>
+						I'm a nerd and an aspiring<br/>
+						software engineer specializing in development of <span
+						className="theme-primary-text">web systems</span>.<br/>
+						EOF<br/>
+						<Prompt/> <span className="theme-primary-text">date</span> '+Today is %A, %B %d, %Y.'<br/>
+						<Version/> <br/>
+						<Prompt/> <br/>
+					</Typist>
+				</Terminal>
+			</Slider>
 		</div>
 	);
 };
