@@ -4,17 +4,22 @@ import Typist from "react-typist";
 
 export const Prompt = () => {
 	return (<>
-		<span className="theme-primary-text">nik</span>@<span className="theme-primary-text">7aske.com</span> ~ $
+		<a className="mail-prompt" href="mailto:nik@7aske.com">
+			<span className="user-host-prompt">&nbsp;nik@7aske.com </span><span className="arrow"/>
+			<span className="dir"> ~ </span><span className="arrow"/></a>
 	</>);
 };
 
 export const Version = () => {
-	return <span>5.9.14-arch1-1</span>;
+	const weekdays = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+	const months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+	const date = new Date();
+	return <span>Today is {weekdays[date.getDay()]}, {months[date.getMonth()]} {date.getDate()}, {date.getFullYear()}.</span>;
 };
 
 export const WelcomeBox = () => {
 	return (
-		<div style={style} className="flow-text theme-grey animate__animated animate__fadeIn">
+		<div style={style} className="flow-text no-select theme-black animate__animated animate__fadeIn">
 			<div className="left-align">
 				<Prompt/> <span className="theme-primary-text">cat</span> &lt;&lt; EOF<br/>
 				<Typist cursor={{element: "█", blink: true}} avgTypingDelay={30}>
@@ -23,7 +28,7 @@ export const WelcomeBox = () => {
 					software engineer specializing in development of <span
 					className="theme-primary-text">web systems</span>.<br/>
 					EOF<br/>
-					<Prompt/> <span className="theme-primary-text">uname</span> -r<br/>
+					<Prompt/> <span className="theme-primary-text">date</span> '+Today is %A, %B %d, %Y.'<br/>
 					<Version/> <br/>
 					<Prompt/> <br/>
 				</Typist>

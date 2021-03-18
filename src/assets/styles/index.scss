@@ -1,16 +1,64 @@
 @import "theme";
 
 html, body {
-	background-color: $theme-black;
+	background-color: $theme-grey;
 	overflow-x: hidden;
 	font-family: $font-primary;
 }
 
 .hover-text {
 	transition: all 500ms;
+
 	&:hover {
 		&, svg, path {
-			color: $theme-primary !important;
+			color: $theme-accent !important;
+		}
+	}
+}
+
+.user-host-prompt {
+	background-color: $theme-grey;
+}
+
+.dir {
+	background-color: $theme-primary;
+	& + .arrow {
+		background-color: $theme-black;
+		&:after {
+			color: $theme-primary;
+		}
+	}
+}
+
+.arrow {
+	color: $theme-grey;
+	background-color: $theme-primary;
+	&::after {
+		content: '';
+	}
+}
+
+.mail-prompt {
+	border: none;
+	color: $theme-white !important;
+	&:hover {
+		background-color: $theme-accent2 !important;
+		span {
+			background-color: $theme-accent !important;
+			color: $theme-black;
+		}
+		& > .arrow::after {
+			color: $theme-accent;
+			background-color: $theme-accent2;
+		}
+		.dir {
+			background-color: $theme-accent2 !important;
+			& + .arrow {
+				&:after {
+					background-color: $theme-black !important;
+					color: $theme-accent2;
+				}
+			}
 		}
 	}
 }
