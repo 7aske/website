@@ -12,7 +12,7 @@ export const Navbar = (props: NavbarProps) => {
 	return (
 		<nav className="navbar theme-grey">
 			<div className="nav-wrapper">
-				<ul className="center animate__animated animate__fadeInUp">
+				<ul className="center">
 					<li>{getLink()}</li>
 				</ul>
 			</div>

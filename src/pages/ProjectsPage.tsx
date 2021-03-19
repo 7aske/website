@@ -46,8 +46,8 @@ const projs: Proj[] = [
 
 const Project = ({href, name, description}: Proj) => {
 	return (<>
-		<a target="_blank" data-tip={description} href={href}>{name}</a><br/>
-		<ReactTooltip effect="solid" place="right" type="dark"/>
+		<a target="_blank" data-for={name} data-tip={description} href={href}>{name}</a><br/>
+		<ReactTooltip id={name} effect="solid" place="right" type="dark"/>
 	</>);
 }
 
@@ -62,6 +62,7 @@ export const ProjectsPage = () => {
 						<Prompt/> <br/>
 					</Typist>
 				</Terminal>
+				<ContactInfoContainer/>
 			</Slider>
 		</div>
 	);

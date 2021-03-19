@@ -10,10 +10,12 @@ interface ContactInfoProps extends Contact {
 export const ContactInfo = (props: ContactInfoProps) => {
 	return (
 		<div style={style} key={props.url} className="animate__animated animate__fadeIn">
-			<a target="_blank" className="hover-text" data-tip={props.description} href={props.url}>
+			<a target="_blank" className="hover-text" data-for={`contact-${props.name}`} data-tip={props.description} href={props.url}>
 				<FontAwesomeIcon size={"3x"} icon={props.icon}/>
 			</a>
-			<ReactTooltip effect="solid" place="bottom" type="dark"/>
+			<ReactTooltip id={`contact-${props.name}`} effect="solid" place="bottom" type="dark">
+
+			</ReactTooltip>
 		</div>
 	);
 };
