@@ -9,7 +9,7 @@ interface ContactInfoProps extends Contact {
 
 export const ContactInfo = (props: ContactInfoProps) => {
 	return (
-		<div style={style} key={props.url} className="animate__animated animate__fadeIn">
+		<div style={style} key={props.url}>
 			<a target="_blank" className="hover-text" data-for={`contact-${props.name}`} data-tip={props.description} href={props.url}>
 				<FontAwesomeIcon size={"3x"} icon={props.icon}/>
 			</a>

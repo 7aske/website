@@ -11,10 +11,8 @@ export const Version = () => {
 type TerminalProps = {} & React.PropsWithChildren<any>;
 export const Terminal = (props: TerminalProps) => {
 	return (
-		<div className="terminal flow-text no-select theme-black animate__animated animate__fadeIn">
-			<div className="left-align">
+		<div className="terminal flow-text no-select theme-black left-align animate__animated animate__fadeIn animate__fast">
 				{props.children}
-			</div>
 		</div>
 	);
 };

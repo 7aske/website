@@ -1,8 +1,8 @@
 import React from "react";
-import { Router } from "./router/Router";
 import ReactGA from "react-ga";
 import { HashRouter } from "react-router-dom";
 import { Footer } from "./components/navbar/Footer";
+import { IndexPage } from "./pages/IndexPage";
 
 ReactGA.initialize("G-YZCG7E8WQ6");
 
@@ -11,7 +11,7 @@ function App() {
 	return (
 		<main>
 			<HashRouter>
-				<Router/>
+				<IndexPage/>
 				<Footer/>
 			</HashRouter>
 		</main>
