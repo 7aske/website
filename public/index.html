@@ -22,17 +22,22 @@
     <meta property="twitter:title" content="7aske.com - Nikola Tasić">
     <meta property="twitter:description" content="Hello! My name is Nikola. I'm a nerd and an aspiring software engineer.">
     <meta property="twitter:image" content="%PUBLIC_URL%/og_image.jpg">
+    <meta name="theme-color" content="#2e3440"/>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script async src="https://www.googletagmanager.com/gtag/js?id=%REACT_APP_GA_ID%"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      try {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-      gtag('config', '%REACT_APP_GA_ID%');
+        gtag('config', '%REACT_APP_GA_ID%');
+      } catch (_){
+        // ignored
+      }
     </script>
   </body>
 </html>

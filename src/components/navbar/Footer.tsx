@@ -7,7 +7,7 @@ export const Footer = () => {
 		<footer className="footer theme-grey">
 			<ul className="center">
 				<li className="theme-black-text">
-					<a href="https://reactjs.org/" target="_blank">Powered by
+					<a rel="noopener" href="https://reactjs.org/" target="_blank">Powered by
 						<FontAwesomeIcon className="theme-black-text" icon={faReact}/>
 					</a>
 				</li>

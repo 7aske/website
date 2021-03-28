@@ -1,12 +1,12 @@
 import * as React from "react";
-import { useEffect } from "react";
+import { useEffect, Suspense, lazy } from "react";
 import { Slider } from "../components/slider/Slider";
-import { Terminal, Version } from "../components/slider/Terminal";
+import { Version } from "../components/slider/Terminal";
 import { Prompt } from "../components/slider/Prompt";
 import Typist from "react-typist";
 import { ContactInfoContainer } from "../components/slider/ContactInfoContainer";
 import cookie from "react-cookies";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import { Proj } from "../@types/entity/Proj";
 import { Project } from "../components/Project";
 
@@ -43,6 +43,8 @@ const projs: Proj[] = [
 		description: "Game from scratch in C",
 	},
 ];
+
+const Terminal = lazy(() => import("../components/slider/Terminal"))
 
 
 export const IndexPage = () => {
@@ -82,7 +84,8 @@ export const IndexPage = () => {
 	return (
 		<div>
 			<Slider>
-				<Switch>
+				<Suspense fallback={<div/>}>
+					<Switch>
 					<Route exact path="/">
 						<Terminal key={"/"}>
 							<Prompt/> <span className="theme-primary-text">cat</span> &lt;&lt; EOF<br/>
@@ -98,8 +101,12 @@ export const IndexPage = () => {
 							</Typist>
 						</Terminal>
 					</Route>
+					<Route>
+						<Redirect to="/"/>
+					</Route>
 				</Switch>
 				<ContactInfoContainer/>
+				</Suspense>
 			</Slider>
 		</div>
 	);
