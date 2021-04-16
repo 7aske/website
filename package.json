@@ -29,6 +29,7 @@
     "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy:prod": "npm run build",
     "deploy:prod": "rsync --delete --progress -havz build/ root@7aske.com:/srv/http/website/",
     "eject": "react-scripts eject"
   },
