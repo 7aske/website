@@ -59,6 +59,30 @@ $font-primary: FiraCode-Medium;
 	@include bg-color($theme-primary);
 }
 
+.theme-accent-text {
+	@include color($theme-accent);
+}
+
+.theme-accent-border {
+	@include border-color($theme-accent);
+}
+
+.theme-accent {
+	@include bg-color($theme-accent);
+}
+
+.theme-accent2-text {
+	@include color($theme-accent2);
+}
+
+.theme-accent2-border {
+	@include border-color($theme-accent2);
+}
+
+.theme-accent2 {
+	@include bg-color($theme-accent2);
+}
+
 .theme-black-text {
 	@include color($theme-black);
 }

@@ -5,8 +5,13 @@ type NavbarProps = {};
 export const Navbar = (props: NavbarProps) => {
 	const location = useLocation();
 	const getLink = () => {
-		return location.pathname === "/projects" ?
-			<Link to="/">index</Link> : <Link to="/projects">projects</Link>;
+		if (location.pathname === "/")
+			return <Link to="/projects">projects</Link>;
+		if (location.pathname === "/projects")
+			return <Link to="/experience">experience</Link>
+		if (location.pathname === "/experience")
+			return <Link to="/">index</Link>
+		return <Link to="/index">index</Link>;
 	};
 
 	return (

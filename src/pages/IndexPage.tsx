@@ -44,7 +44,7 @@ const projs: Proj[] = [
 	},
 ];
 
-const Terminal = lazy(() => import("../components/slider/Terminal"))
+const Terminal = lazy(() => import("../components/slider/Terminal"));
 
 
 export const IndexPage = () => {
@@ -86,26 +86,50 @@ export const IndexPage = () => {
 			<Slider>
 				<Suspense fallback={<div/>}>
 					<Switch>
-					<Route exact path="/">
-						<Terminal key={"/"}>
-							<Prompt/> <span className="theme-primary-text">cat</span> &lt;&lt; EOF<br/>
-							{getContent()}
-						</Terminal>
-					</Route>
-					<Route exact path="/projects">
-						<Terminal key={"/projects"}>
-							<Prompt/> <span className="theme-primary-text">cat</span> ~/projects<br/>
-							<Typist cursor={{element: "█", blink: true}} avgTypingDelay={30}>
-								{projs.map(proj => <Project key={proj.name} {...proj}/>)}
-								<Prompt/> <br/>
-							</Typist>
-						</Terminal>
-					</Route>
-					<Route>
-						<Redirect to="/"/>
-					</Route>
-				</Switch>
-				<ContactInfoContainer/>
+						<Route exact path="/">
+							<Terminal key={"/"}>
+								<Prompt/> <span className="theme-primary-text">cat</span> &lt;&lt; EOF<br/>
+								{getContent()}
+							</Terminal>
+						</Route>
+						<Route exact path="/projects">
+							<Terminal key={"/projects"}>
+								<Prompt/> <span className="theme-primary-text">cat</span> ~/projects<br/>
+								<Typist cursor={{element: "█", blink: true}} avgTypingDelay={30}>
+									{projs.map(proj => <Project key={proj.name} {...proj}/>)}
+									<Prompt/> <br/>
+								</Typist>
+							</Terminal>
+						</Route>
+						<Route exact path={"/experience"}>
+							<Terminal>
+								<span className="theme-accent2-text">2019-present</span><br/>
+								Intern at Metropolitan University Faculty of Informational Technologies involved in
+								development of service oriented informational systems using
+								mostly <span className="theme-accent-text">Angular</span>, <span
+								className="theme-accent-text">React</span>,
+								<span className="theme-accent-text"> Spring Boot</span> and <span
+								className="theme-accent-text">Flask</span>.
+								Experience in setting up production environments and deploying to <span
+								className="theme-accent-text">Ubuntu </span>
+								and <span className="theme-accent-text">CentOS</span> servers. Huge deal of debugging
+								and problem solving
+								in production. Took part in database design, backup and migrations mostly <span
+								className="theme-accent-text">MySQL</span>
+								but also NoSQL databases such as <span className="theme-accent-text">MongoDB</span>.
+								Mostly focused on developing
+								clean backend API's with complex database structure.
+								<br/>
+								<span className="theme-accent2-text">2018-present</span><br/>
+								Student at Metropolitan University Faculty of Informational Technologies department of
+								software engineering.
+							</Terminal>
+						</Route>
+						<Route>
+							<Redirect to="/"/>
+						</Route>
+					</Switch>
+					<ContactInfoContainer/>
 				</Suspense>
 			</Slider>
 		</div>
