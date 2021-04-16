@@ -54,6 +54,7 @@ export const IndexPage = () => {
 
 		if (!visited)
 			cookie.save("visited", "1", {});
+		// eslint-disable-next-line
 	}, []);
 
 	const getContent = () => {
@@ -86,8 +87,8 @@ export const IndexPage = () => {
 			<Slider>
 				<Suspense fallback={<div/>}>
 					<Switch>
-						<Route exact path="/">
-							<Terminal key={"/"}>
+						<Route exact path="/index">
+							<Terminal key={"/index"}>
 								<Prompt/> <span className="theme-primary-text">cat</span> &lt;&lt; EOF<br/>
 								{getContent()}
 							</Terminal>
@@ -102,9 +103,14 @@ export const IndexPage = () => {
 							</Terminal>
 						</Route>
 						<Route exact path={"/experience"}>
-							<Terminal>
-								<span className="theme-accent2-text">2019-present</span><br/>
-								Intern at Metropolitan University Faculty of Informational Technologies involved in
+							<Terminal key={"/experience"}>
+								<Prompt/> <span className="theme-primary-text">cat</span> ~/experience<br/>
+								<span className="date-subheader">Feb 2020 -&gt; Aug 2020</span><br/>
+								Developed and deployed a web system consisting of a website, webshop and a blog for a local massage centre.
+								<br/>
+								<br/>
+								<span className="date-subheader">2019 -&gt; <span className="theme-accent3-text">undefined</span></span><br/>
+								Intern at Metropolitan University Faculty of Information Technologies involved in
 								development of service oriented informational systems using
 								mostly <span className="theme-accent-text">Angular</span>, <span
 								className="theme-accent-text">React</span>,
@@ -112,21 +118,23 @@ export const IndexPage = () => {
 								className="theme-accent-text">Flask</span>.
 								Experience in setting up production environments and deploying to <span
 								className="theme-accent-text">Ubuntu </span>
-								and <span className="theme-accent-text">CentOS</span> servers. Huge deal of debugging
-								and problem solving
-								in production. Took part in database design, backup and migrations mostly <span
-								className="theme-accent-text">MySQL</span>
+								and <span className="theme-accent-text">CentOS</span> servers. Took part in a great deal of problem solving
+								and debugging of production systems. Experience in database design, backup and migrations mostly <span
+								className="theme-accent-text">MySQL </span>
 								but also NoSQL databases such as <span className="theme-accent-text">MongoDB</span>.
-								Mostly focused on developing
-								clean backend API's with complex database structure.
+								Mostly focused on developing clean backend API's with complex database structure.
 								<br/>
-								<span className="theme-accent2-text">2018-present</span><br/>
-								Student at Metropolitan University Faculty of Informational Technologies department of
+								<br/>
+								<span className="date-subheader">2018 -&gt; <span className="theme-accent3-text">undefined</span></span><br/>
+								Student at Metropolitan University Faculty of Information Technologies department of
 								software engineering.
+								<br/>
+								<br/>
+								<Prompt/><br/>
 							</Terminal>
 						</Route>
 						<Route>
-							<Redirect to="/"/>
+							<Redirect to="/index"/>
 						</Route>
 					</Switch>
 					<ContactInfoContainer/>

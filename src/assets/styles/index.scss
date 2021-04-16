@@ -90,12 +90,18 @@ html, body {
 
 .navbar {
 	margin-top: 1em;
-	z-index: 0!important;
+	z-index: 0 !important;
 
 	ul {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		li {
+			a.active {
+				color: $theme-accent !important;
+			}
+		}
 
 		li:hover {
 			a {
@@ -131,6 +137,10 @@ html, body {
 			filter: alpha(0.8);
 		}
 	}
+}
+
+.date-subheader {
+	color: $theme-accent2;
 }
 
 @keyframes rotation {

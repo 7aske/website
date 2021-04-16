@@ -1,24 +1,15 @@
 import * as React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-type NavbarProps = {};
-export const Navbar = (props: NavbarProps) => {
-	const location = useLocation();
-	const getLink = () => {
-		if (location.pathname === "/")
-			return <Link to="/projects">projects</Link>;
-		if (location.pathname === "/projects")
-			return <Link to="/experience">experience</Link>
-		if (location.pathname === "/experience")
-			return <Link to="/">index</Link>
-		return <Link to="/index">index</Link>;
-	};
+export const Navbar = () => {
 
 	return (
 		<nav className="navbar theme-grey">
 			<div className="nav-wrapper">
 				<ul className="center">
-					<li>{getLink()}</li>
+					<li><NavLink activeClassName="active" to="/index">index</NavLink></li>
+					<li><NavLink activeClassName="active" to="/projects">projects</NavLink></li>
+					<li><NavLink activeClassName="active" to="/experience">experience</NavLink></li>
 				</ul>
 			</div>
 		</nav>

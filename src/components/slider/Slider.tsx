@@ -1,6 +1,5 @@
 import * as React from "react";
 import { CSSProperties } from "react";
-import { ContactInfoContainer } from "./ContactInfoContainer";
 import { Navbar } from "../navbar/Navbar";
 
 type SliderProps = {} & React.PropsWithChildren<any>;
