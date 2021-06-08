@@ -10,6 +10,7 @@ export const Navbar = () => {
 					<li><NavLink activeClassName="active" to="/index">index</NavLink></li>
 					<li><NavLink activeClassName="active" to="/projects">projects</NavLink></li>
 					<li><NavLink activeClassName="active" to="/experience">experience</NavLink></li>
+					<li><NavLink activeClassName="active" to="/about">about</NavLink></li>
 				</ul>
 			</div>
 		</nav>
