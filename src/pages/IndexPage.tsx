@@ -144,33 +144,33 @@ export const IndexPage = () => {
 								&gt; ~/about.pdf
 								/dev/stdout<br/>
 								<br/>
-								Hi, my name is Nikola and im born
-								on 24th of May 1995. I’m a nerd
-								and an aspiring software engineer
-								specializing in the development of
-								web systems. Among the wide
-								spectrum of my interests i would
-								emphasize backend web
-								development, dev-ops, Linux
-								systems and clean reusable
-								architectures. I base my
+								Hi, my name is Nikola and I was
+								born on 24th of May 1995. I’m a
+								nerd and an aspiring software
+								engineer specializing in the
+								development of web systems.
+								Among the wide spectrum of my
+								interests, I would emphasize
+								backend web development, dev-
+								ops, Linux systems and clean
+								reusable architectures. I base my
 								knowledge off of late Richard
 								Feynman’s quote ‘‘What I cannot
 								create, I do not understand.’’
 								which can be observed on my
-								github/website. Also Robert C.
+								github/website. Also, Robert C.
 								Martin had an enormous influence
 								on me with his book Clean Code
 								which felt eye-opening and
-								relatable on so many levels. I think
-								I am honest, enthusiastic, easy to
-								work with, more than eager to
-								learn more and also wiling to think
-								outside the box to solve any
-								problem. Also I am a big advocate
-								on open-source software. Besides
-								programming im interested in
-								space exploration and
+								relatable on numerous levels. I
+								think I am honest, enthusiastic,
+								easy to work with, more than
+								eager to learn more and also
+								willing to think outside the box to
+								solve any problem. Also, I am a big
+								advocate for open-source software.
+								Besides programming, I’m
+								interested in space exploration and
 								documentary photography.
 								<br/>
 								<Prompt/> <br/>
