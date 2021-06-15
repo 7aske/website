@@ -1,7 +1,7 @@
 @import "theme";
 
 html, body {
-	background-color: $theme-grey;
+	background-image: linear-gradient(to right bottom, #4C566A, #2E3440);
 	overflow-x: hidden;
 	font-family: $font-primary;
 }
@@ -89,6 +89,7 @@ html, body {
 }
 
 .navbar {
+	background-color: transparent;
 	margin-top: 1em;
 	z-index: 0 !important;
 
@@ -99,12 +100,13 @@ html, body {
 
 		li {
 			a.active {
-				color: $theme-accent !important;
+				color: $theme-accent2 !important;
 			}
 		}
 
 		li:hover {
 			a {
+				color: $theme-accent !important;
 				background: transparent !important;
 			}
 		}
@@ -114,7 +116,13 @@ html, body {
 	overflow: hidden;
 }
 
+.contact-link {
+	background-color: transparent !important;
+	margin: 0 1em;
+}
+
 .footer {
+	background: transparent;
 	position: absolute !important;
 	bottom: 0;
 	width: 100vw;
