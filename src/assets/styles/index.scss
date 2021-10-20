@@ -81,13 +81,6 @@ html, body {
 	overflow-y: auto;
 }
 
-@media screen and (max-width: 600px) {
-	.terminal {
-		height: 20em;
-		font-size: 1em;
-	}
-}
-
 .navbar {
 	background-color: transparent;
 	margin-top: 1em;
@@ -147,8 +140,23 @@ html, body {
 	}
 }
 
+.position-subheader {
+	color: $theme-accent;
+}
+
 .date-subheader {
 	color: $theme-accent2;
+}
+
+@media screen and (max-width: 600px) {
+	.terminal {
+		height: 20em;
+		font-size: 1em;
+	}
+
+	.contact-link {
+		margin: 0 0.6em;
+	}
 }
 
 @keyframes rotation {

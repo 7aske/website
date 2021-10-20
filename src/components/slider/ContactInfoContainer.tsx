@@ -18,5 +18,5 @@ const style: CSSProperties = {
 	textAlign: "center",
 	justifyContent:"space-evenly",
 	marginTop: "2em",
-	maxWidth: "90vw",
+	maxWidth: "80vw",
 };

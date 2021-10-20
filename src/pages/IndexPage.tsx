@@ -13,9 +13,9 @@ import { Project } from "../components/Project";
 
 const projs: Proj[] = [
 	{
-		name: "rzp-blog",
-		href: "https://blog.rzp.7aske.xyz",
-		description: "React blog",
+		name: "frigonekretnine",
+		href: "https://frigonekretnine.com",
+		description: "Real-estate agency web system",
 	},
 	{
 		name: "zen",
@@ -28,14 +28,24 @@ const projs: Proj[] = [
 		description: "Spring project code generator",
 	},
 	{
-		name: "xinp",
-		href: "https://github.com/7aske/xinp",
-		description: "i3input replacement with Xresources support",
+		name: "grain",
+		href: "https://github.com/7aske/grain",
+		description: "Zero dependency web framework",
 	},
 	{
 		name: "rgs",
 		href: "https://github.com/7aske/rgs",
 		description: "Batch git status checking tool",
+	},
+	{
+		name: "rzp-blog",
+		href: "https://blog.rzp.7aske.xyz",
+		description: "A generic blog project",
+	},
+	{
+		name: "xinp",
+		href: "https://github.com/7aske/xinp",
+		description: "i3input replacement with Xresources support",
 	},
 	{
 		name: "agame",
@@ -105,6 +115,18 @@ export const IndexPage = () => {
 						<Route exact path={"/experience"}>
 							<Terminal key={"/experience"}>
 								<Prompt/> <span className="theme-primary-text">cat</span> ~/experience<br/>
+								<span className="position-subheader">Backend developer</span><br/>
+								<span className="date-subheader">April 2021 -&gt; July 2021</span><br/>
+								Backend and architectural engineer of a employee management system with analytics for a
+								local massage centre.
+								<br/><br/>
+								<span className="position-subheader">Backend developer</span><br/>
+								<span className="date-subheader">Dec 2020 -&gt; Jun 2021</span><br/>
+								Co-developed and managed a real estate advertising system for a domestic real estate
+								business.
+								<br/>
+								<br/>
+								<span className="position-subheader">Fullstack developer</span><br/>
 								<span className="date-subheader">Feb 2020 -&gt; Aug 2020</span><br/>
 								Developed and deployed a web system consisting of a website, webshop and a blog for a
 								local massage centre.
@@ -141,22 +163,20 @@ export const IndexPage = () => {
 						<Route exact path={"/about"}>
 							<Terminal key={"/experience"}>
 								<Prompt/> <span className="theme-primary-text">pdftotext</span> \<br/>
-								&gt; ~/about.pdf
+								~/about.pdf
 								/dev/stdout<br/>
 								<br/>
-								Hi, my name is Nikola and I was
-								born on 24th of May 1995. I’m a
+								Hi, my name is Nikola. I’m a
 								nerd and an aspiring software
 								engineer specializing in the
 								development of web systems.
 								Among the wide spectrum of my
 								interests, I would emphasize
-								backend web development, dev-
-								ops, Linux systems and clean
-								reusable architectures. I base my
-								knowledge off of late Richard
-								Feynman’s quote ‘‘What I cannot
-								create, I do not understand.’’
+								backend web development, devops, Linux systems and clean
+								reusable architectures. I base
+								my knowledge off of late Richard
+								Feynman’s quote &quot;What I cannot
+								create, I do not understand.&quot;
 								which can be observed on my
 								github/website. Also, Robert C.
 								Martin had an enormous influence
@@ -166,12 +186,13 @@ export const IndexPage = () => {
 								think I am honest, enthusiastic,
 								easy to work with, more than
 								eager to learn more and also
-								willing to think outside the box to
-								solve any problem. Also, I am a big
-								advocate for open-source software.
-								Besides programming, I’m
-								interested in space exploration and
-								documentary photography.
+								willing to think outside the box
+								to solve any problem. Also, I am
+								a big advocate for open-source
+								software. Besides programming,
+								I’m interested in space
+								exploration and documentary
+								photography.
 								<br/>
 								<Prompt/> <br/>
 							</Terminal>
