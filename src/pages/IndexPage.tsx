@@ -63,7 +63,7 @@ export const IndexPage = () => {
 	useEffect(() => {
 
 		if (!visited)
-			cookie.save("visited", "1", {});
+			cookie.save("visited", "1", {maxAge: 2^31 - 1});
 		// eslint-disable-next-line
 	}, []);
 
